@@ -1,0 +1,16 @@
+<div class='container' >
+<h1>List of Friends</h1>
+
+<% if @friends.any? %>
+  <% @friends.each do |friend| %> 
+    <br />
+   <h3> <%= link_to friend.name, friend_path(friend) %> </h3>
+    <% end %>
+  <% else %>
+  <h4> You have no friends, yet. </h4>
+  <% end %>
+
+  <hr />
+  <p> <%= link_to 'Add New Friends', new_friend_path %> </p>
+ 
+</div>

@@ -1,0 +1,17 @@
+<h1>Your Friend: <%= @friend.name %> </h1>
+<hr />
+<h4> Age: <%= @friend.age %> </h4>
+<h4> Hair Color: <%= @friend.hair_color %> </h4>
+<h4> Eye Color: <%= @friend.eye_color %> </h4>
+<h4> Phone Number: <%= @friend.phone %> </h4>
+<h4> Gender: <%= @friend.gender %> </h4>
+<h4> Alive: <%= @friend.alive ? 'yes' : 'no'  %> </h4>
+<i>Created At: <%= @friend.created_at %> <i>
+<i> Updated At: <%= @friend.updated_at %>
+</i>
+
+<div class='action-buttons'>
+  <%= link_to 'Edit', edit_friend_path(@friend)%>
+  <%= link_to 'Delete', @friend, method: :delete %>
+  <%= link_to 'All Friends', friends_path %>
+</div>
